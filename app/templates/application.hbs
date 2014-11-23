@@ -1,3 +1,33 @@
-<h2 id='title'>Welcome to Ember.js</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h1>Good Tipper</h1>
 
-{{outlet}}
+      <div class="row input-fields">
+
+        <div class="col-md-6">
+          <label>How much was your meal?</label>
+          <div class="input-group input-group-lg">
+            <span class="input-group-addon">$</span>
+            <input type=number placeholder="0.00" class="form-control" min=0>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label>How much would you like to tip?</label>
+          <div class="input-group input-group-lg">
+            <input type=number placeholder="18" class="form-control" min=0>
+            <span class="input-group-addon">%</span>
+          </div>
+        </div>
+
+      </div>
+
+
+      <div class="tip-calculation">
+        So, yea. Your tip will be $0.00. For a total of $0.00.
+      </div>
+
+    </div>
+  </div>
+</div>

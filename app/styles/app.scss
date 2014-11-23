@@ -1,0 +1,10 @@
+@import "bootstrap";
+
+.tip-calculation {
+  font-size: 2em;
+  text-align: center;
+  padding: 2rem;
+  border: 1px solid $brand-info;
+  background-color: lighten($brand-info, 20);
+  margin-top: 2rem;
+}

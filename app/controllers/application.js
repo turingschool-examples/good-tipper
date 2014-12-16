@@ -29,7 +29,7 @@ export default Ember.Controller.extend({
 
   isCheapskate: function () {
     var tipPercentage = this.get('tipPercentage');
-    if (parseInt(tipPercentage, 10) < 15) return 'You are pretty bad person.';
+    return parseInt(tipPercentage, 10) < 15;
   }.property('tipPercentage'),
 
   fifteenPercentTip: function () {

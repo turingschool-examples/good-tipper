@@ -26,19 +26,29 @@
 
       <div class="tip-calculation">
         So, yea. Your tip will be ${{tipAmountFormattedForHumans}}. For a total of ${{totalBillFormattedForHumans}}.
-        <p>{{isCheapskate}}</p>
+        <p>{{#if isCheapskate}}You are a bad person.{{/if}}</p>
       </div>
 
-      <ul>
-        <li>${{fifteenPercentTip}} is a 15% tip.</li>
-        <li>${{eighteenPercentTip}} is a 18% tip.</li>
-        <li>${{twentyPercentTip}} is a 20% tip.</li>
-      </ul>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td>${{fifteenPercentTip}} is a 15% tip.</td>
+            <td>${{eighteenPercentTip}} is a 18% tip.</td>
+            <td>${{twentyPercentTip}} is a 20% tip.</td>
+          </tr>
+        <tbody>
+      </table>
 
-      <div class="buttons">
-        <button {{action 'setTipPercentage' 15}} class="btn btn-primary">15%</button>
-        <button {{action 'setTipPercentage' 18}} class="btn btn-primary">18%</button>
-        <button {{action 'setTipPercentage' 20}} class="btn btn-primary">20%</button>
+       <div class="btn-group btn-group-justified" role="group">
+         <div class="btn-group" role="group">
+           <button {{action 'setTipPercentage' 15}} class="btn btn-default">15%</button>
+         </div>
+         <div class="btn-group" role="group">
+           <button {{action 'setTipPercentage' 18}} class="btn btn-default">18%</button>
+         </div>
+         <div class="btn-group" role="group">
+           <button {{action 'setTipPercentage' 20}} class="btn btn-default">20%</button>
+         </div>
       </div>
 
     </div>

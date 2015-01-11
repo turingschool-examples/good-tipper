@@ -49,9 +49,8 @@ export default Ember.Controller.extend({
 
   actions: {
 
-    setTipPercentage: function (amount, multiplier) {
-      multiplier = multiplier || 1;
-      this.set('tipPercentage', amount * multiplier);
+    setTipPercentage: function (amount) {
+      this.set('tipPercentage', amount);
     }
 
   }

@@ -54,6 +54,7 @@ export default Ember.Controller.extend({
 
   twentyPercentTip: function () {
     var amount = this.get('billAmount' * 0.2;
+    var amount = this.get('billAmount') * 0.2;
     return numeral(amount).format('0.00');
   }.property('billAmount'),
 

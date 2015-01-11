@@ -25,16 +25,16 @@
 
 
       <div class="tip-calculation">
-        So, yea. Your tip will be ${{tipAmountFormattedForHumans}}. For a total of ${{totalBillFormattedForHumans}}.
+        So, yea. Your tip will be {{number-to-currency tipAmount}}. For a total of {{number-to-currency billAmount}}.
         <p>{{#if isCheapskate}}You are a bad person.{{/if}}</p>
       </div>
 
       <table class="table">
         <tbody>
           <tr>
-            <td class="auto-tip">${{fifteenPercentTip}} is a 15% tip.</td>
-            <td class="auto-tip">${{eighteenPercentTip}} is a 18% tip.</td>
-            <td class="auto-tip">${{twentyPercentTip}} is a 20% tip.</td>
+            <td class="auto-tip">{{number-to-currency fifteenPercentTip}} is a 15% tip.</td>
+            <td class="auto-tip">{{number-to-currency eighteenPercentTip}} is a 18% tip.</td>
+            <td class="auto-tip">{{number-to-currency twentyPercentTip}} is a 20% tip.</td>
           </tr>
         <tbody>
       </table>

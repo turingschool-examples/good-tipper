@@ -29,31 +29,20 @@ export default Ember.Controller.extend({
     return this.get('billAmount') + this.get('tipAmount');
   }.property('billAmount', 'tipAmount'),
 
-  tipAmountFormattedForHumans: function () {
-    return numeral(this.get('tipAmount')).format('0.00');
-  }.property('tipAmount'),
-
-  totalBillFormattedForHumans: function () {
-    return numeral(this.get('totalBill')).format('0.00');
-  }.property('totalBill'),
-
   isCheapskate: function () {
     var tipPercentage = this.get('tipPercentage');
     return tipPercentage < 15;
   }.property('tipPercentage'),
 
   fifteenPercentTip: function () {
-  var amount = this.get('billAmount') * 0.15;
-    return numeral(amount).format('0.00');
+    return this.get('billAmount') * 0.15;
   }.property('billAmount'),
 
   eighteenPercentTip: function () {
-    var amount = this.get('billAmount') * 0.18;
-    return numeral(amount).format('0.00');
+    return this.get('billAmount') * 0.18;
   }.property('billAmount'),
 
   twentyPercentTip: function () {
-    var amount = this.get('billAmount' * 0.2;
     var amount = this.get('billAmount') * 0.2;
     return numeral(amount).format('0.00');
   }.property('billAmount'),

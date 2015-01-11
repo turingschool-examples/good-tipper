@@ -4,8 +4,18 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
-  billAmount: 0,
-  tipPercentage: 18,
+  setDefaultAmounts: function () {
+    this.set('billAmount', 10);
+    this.set('tipPercentage', 18);
+  }.on('init'),
+
+  billAmount: function (key, newValue, oldValue) {
+    if (arguments.length !== 1) { return parseInt(newValue, 10); }
+  }.property(),
+
+  tipPercentage: function (key, newValue, oldValue) {
+    if (arguments.length !== 1) { return parseInt(newValue, 10); }
+  }.property(),
 
   tipAsPercentage: function () {
     return this.get('tipPercentage') / 100;

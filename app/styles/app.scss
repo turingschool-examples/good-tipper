@@ -5,6 +5,11 @@
   text-align: center;
   padding: 2rem;
   border: 1px solid $brand-info;
+  border-radius: 5px;
   background-color: lighten($brand-info, 20);
   margin-top: 2rem;
+}
+
+.auto-tip {
+  text-align: center;
 }
